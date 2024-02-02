@@ -1,0 +1,2 @@
+
+((:TITLE "testTitle1" :ARTIST "testArtist1" :RATING 1 :RIPPED NIL) (:TITLE "testTitle" :ARTIST "testArtist" :RATING 11 :RIPPED T)) 
