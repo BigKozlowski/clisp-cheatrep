@@ -63,4 +63,17 @@
       (setf (subseq *seq* 3 6) "xx") -> "fooxxcbaz" - new val is too short, changed only part of subseq
       (search "bar" "foobarbaz") -> 3 - finds index of subseq start
       (mismatch "foobarbaz" "foom") -> 3 - returns first mismatching element index or nil if both collections are same
+ 
+    Sequence predicates -
+      (every pred collection) - checks if every value satisfies predicate
+      (some pred collection) - at least one satisfies
+      (notany pred collection) - all fails
+      (notevery pred collection) - at least one fails 
+ 
+    Maps -
+      (map type fn ...collections) - applies fn to every element of collections (like zip)
+      (map 'vector #'* #(1 2 3 4 5) #(10 9 8 7 6)) -> #(10 18 24 28 30)
+      (map-into result-collection fn ...collections) - like map, but stores result in provided collection
+      (reduce fn collection) -> reduces collection to single entity
+      Reduce has extra key :initial-value, that contains starting accumulator value
 |#)
